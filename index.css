@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 0 1.5rem;
 }
 
 h3 {
@@ -28,15 +29,35 @@ h3 {
 
 .wrapper>p {
   font-weight: 700;
-  font-size: 2.25rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
+  gap: 2rem;
   text-align: center;
-  width: 575px;
   color: #ffffff;
+}
+
+@media (width < 420px) {
+  .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .wrapper {
+    padding: 1em;
+  }
+
+  .wrapper>p {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .result-holder {
@@ -73,8 +94,8 @@ button:active {
 button {
   font-family: inherit;
   border: 1px solid #ffffff;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   border-radius: 5px;
   color: #ffffff;
   font-size: 18px;
@@ -88,5 +109,5 @@ button {
   display: block;
   margin: 0 auto;
   width: 200px;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
